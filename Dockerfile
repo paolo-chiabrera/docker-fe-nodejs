@@ -2,6 +2,8 @@ FROM node:8-alpine
 
 MAINTAINER Paolo Chiabrera <paolo.chiabrera@gmail.com>
 
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
+
 ONBUILD ADD package.json /tmp/package.json
 
 ONBUILD RUN cd /tmp \
